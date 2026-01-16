@@ -1,9 +1,6 @@
 ## Project title
 Brake Your Bike
 
-## Team members
-Zeynep Eylül Yağcıoğlu, Ansh Kharbanda
-
 ## Project description
 Brake Your Bike is a hardware-software integrated system that enhances bicycle safety by incorporating an automated braking mechanism and turn signaling system. The project combines real-time speed monitoring, accelerometer-based turn detection, and a mechanical braking solution to provide a responsive and efficient biking experience.
 
@@ -12,13 +9,6 @@ The braking system uses a servo motor calibrated through a Pulse Width Modulatio
 The turn signaling mechanism leverages the MSA311 I2C accelerometer to detect handlebar movements, distinguishing turns from straight-line cycling. Button-activated interrupts initiate turn monitoring, and LEDs are used to indicate the rider's intention to turn. The system features a custom driver for the accelerometer, designed for flexibility and optimized for continuous data processing.
 
 This project showcases a collaborative effort in integrating mechanical design, electronic systems, and software algorithms to enhance bicycle safety, aiming to provide a comprehensive solution for urban cyclists.
-
-## Member contribution
-Together: all testing, all integration, all wiring & cable management, initial brainstorms for stepper motor (Eylül handled mostly everything after)
-
-Ansh: speed calibration using hall effect sensor, display module for speed & braking, ToF sensor calibration (unsuccessful), physical adjustment of bike parts, and donated bike for project
-
-Eylül: I have combined the "Member Contribution" section with the "Challenges & Solutions" and "What did you learn along the way?" portions of the self-reflection part into a single section below. The remaining prompts from the self-reflection part are addressed separately afterward.
 
 1) Braking Mechanism:
 I made theoretical calculations to determine the necessary net external force and net external torque required, which shaped our final design.
@@ -96,48 +86,6 @@ PWM Driver Code
 
 Accelerometer Arduino Demo
 MSA311 Accelerometer Demo in Arduino. Example code for configuring and reading data from the MSA311 Accelerometer. Used solely as a reference to verify that the configuration functions implemented in the driver align with the requirements. No code was adopted or derived from this source. 
-
-## Self-evaluation
-
-Ansh: 
-
-(1) How well was your team able to execute on the plan in your proposal?  
-Our big lift in this project was getting the bike to brake, which we accomplished successfully. We were also successfully able to measure speed but unsuccessful in measuring distance to nearby objects.
-We did add an entirely new component of adding turn signals, which wasn’t in the initial proposal. 
-
-(2) Challenges & their solutions
-How do you have cables long enough to manage across the bike? You strip jumper cables, solder stranded wire to both ends, add electrical tape to the soldered connections, and create your own long wires.
-How do you mount the hall effect sensor such that it consistently detects the magnet, given the very short range of the sensor on the weak magnet (~1-2 cm). You tape the hall effect sensor on the cardboard box from the servo motor, tape 2 magnets together on the spoke of the bike, and test a lot.
-How do you communicate with a device that has all the setup abstracted into an API? Hard to say and we didn’t get this to work, but the starting point is to download the raw C from the API, dig through the required setup functions, look for examples online of simplifications people have made to the setup, and look to always do the least amount of setup you know will be correct before testing.
-How do you adjust bike brakes such that they are tight enough so that your braking system can honestly provide enough force to activate it but loose enough that the tire can still turn? You spend a lot of time getting your hands dirty with an allen key and testing.
-How do you figure out if the system doesn’t work due to some weird, unpredictable wiring issue or your code? Go through each one of your assumptions one at a time—no matter how basic—and confirm you know the purpose of each wire / component. Doing this enough, testing individual components to isolate the bug, and having patience worked for us even during crunch time. 
-How do you integrate code two people wrote and tested separately? Create one simple test file with the core functionality and incorporate components one at a time as you test.
-
-(3) Things we wish we did better
-LEDs. Fancier designs to match the biking speed on the outside.
-Actually got the ToF sensor to work, or thoroughly checked the datasheet for setup components  before ordering the part. 
-I believe that knowing 
-
-(4) What did you learn along the way? Tell us about it!
-Mostly in challenges / solutions. The other thing I learned is the importance of trust and patience in a group project, especially in a high-stress environment where everyone is really invested in the entire system working. You have to spend a lot of time figuring things out together, and sometimes make sacrifices to work on other parts of the system to support your partner. This attention management and context switching between the needs of your project, needs of your partner, and needs of the deadline is a non-trivial skill I’m still learning.
-
-
-Eylül: 
-
-Additional to the reflection I wrote above, I want to mention a few other points.
-
-(1) How well was your team able to execute on the plan in your proposal?  
-We were able to realize our initial goal braking system and add on top of to that with the automated turn signaling. I believe that though first part was very fulfilling and enjoyable in terms of designing and solving a feasibility puzzle, one of the motivating sources for the second part was having the opportunity to tackle more out-of-comfort zone challenges in the software realm. I am very glad that we were able to integrate both systems within our demo in conjunction with the graphing display.
-
-(2) Challenges & their solutions
-I focused on the main challenges above, but I really want to mention this: SOLDERING and using LASER CUTTING MACHINE! I soldered the pins for both accelerometers, which was a cool challenge and an exciting new skill to learn. Additionally, I completed the training to use the laser cutting machine, designed a rectangle (a hard task :D) and cut it out for mounting the servo motor.
-
-(3) Things we wish we did better
-I focused on this above, but to summarize, having the sensor earlier could have improved our time-line but I believe we did a really good job overall. I also believe that becoming more familiar with data sheets and developing an "eye" for making confident judgment calls when selecting sensors could increase our efficiency in the future.
-
-(4) What did you learn along the way? Tell us about it!
-I focused on this above, but I would like to highlight this: I believe that trusting each other and finding a balance between challenging our ideas and showing support was crucial to the success of our project. Since we were working on different timelines, we divided our focus to cover different parts of the project. However, during integration, we spent a lot of time together and often had to adjust our priorities to support each other. Balancing the needs of the project, our partner, and the deadline required a lot of diligence and teamwork, and I see this as a really nice opportunity to continue developing such an important soft skill.
-Additionally, I came to appreciate once again the value of thinking outside the box when solving problems. There were instances where we needed to address challenges, and sometimes tools from our everyday lives proved to be just as effective as more complex mechanisms or technologies. For example, we used the box of the servo motor to install the magnet for the hall effect sensor and utilized a piece of wood from a laser cutting machine to mount the servo motor.
 
 ## Photos
 :D
