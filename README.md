@@ -1,5 +1,5 @@
 ## Project title
-Brake Your Bike
+Pi-Cycle (a.k.a Brake Your Bike)
 
 ## Project description
 Brake Your Bike is a hardware-software integrated system that enhances bicycle safety by incorporating an automated braking mechanism and turn signaling system. The project combines real-time speed monitoring, accelerometer-based turn detection, and a mechanical braking solution to provide a responsive and efficient biking experience.
